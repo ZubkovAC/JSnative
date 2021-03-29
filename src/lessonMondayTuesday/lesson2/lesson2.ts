@@ -217,17 +217,48 @@ let arr8 = [...arrayOfRandomNumbers].filter((item) => item % 2 === 0);
 //  6. Выведите массив в консоль.
 
 const styles: Array<string> = ["Jazz", "Blues"];
+//2
+// @ts-ignore
+const stylesplus: Array<string> = styles.push("Rock-n-Roll")
+//
+const stylesplus2: Array<string>= stylesplus.splice(-2,1,'classic')
+//3
+const stylesplus3: Array<string>= stylesplus2.splice(0,1)
+console.log(stylesplus3)
+//4
+const stylesplus4: Array<string>= stylesplus.splice(0,0,"Rap" , "Reggae")
+console.log(stylesplus4)
 
 // Task 11
 //  Подсчитать в строке "dskjdhfkjshdfkjhsdkjureyteiruyiqywehjkh"
 //  отдельно количество букв r, k, t и вывести в консоль.
 const loremString: string = "dskjdhfkjshdfkjhsdkjureyteiruyiqywehjkh";
+let  r = 0
+let  k = 0
+let  t = 0
+for ( let i = 0 ; i < loremString.length; i++){
+    if( loremString[i]=== 'r'){
+        r ++
+    }
+    if( loremString[i]=== 'k'){
+        k ++
+    }
+    if( loremString[i]=== 't'){
+        t ++
+    }
+}
+console.log(r)
+console.log(k)
+console.log(t)
+
 
 // Task 12
 //  Получить из строки 'a big brown fox jumps over the lazy dog' массив слов,
 //  который содержит элементы, длина которых не больше 3 символа.
 //  Вывести массив в консоль.
 const exampleString: string = 'a big brown fox jumps over the lazy dog';
+exampleString.split(' ').map(str=> str.length >= 3 ? str:'').filter(str=>str !== '')
+console.log(exampleString)
 
 
 // Task 13
@@ -279,7 +310,7 @@ classes.forEach(group => {
 
 
 // Task 14
-// На основе массива из Task 12 необходимо собрать массив отличников.
+// На основе массива из Task 13 необходимо собрать массив отличников.
 
 let ArrayExcellent: Array<PupilType> = [];
 classes.forEach(item => item.forEach(el => el.isExcellent ? ArrayExcellent.push(el): null));
@@ -288,7 +319,7 @@ classes.reduce((acc, item) => [...acc, ...item.filter(el => el.isExcellent)], []
 
 
 // Task 15
-// На основе массива из Task 12 необходимо собрать массив обычных учеников старше 10 лет
+// На основе массива из Task 13 необходимо собрать массив обычных учеников старше 10 лет
 // и младше 15.
 
 // let ArrayExcellent1: Array<PupilType> = [];
