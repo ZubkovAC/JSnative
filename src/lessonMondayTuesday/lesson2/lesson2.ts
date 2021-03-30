@@ -329,6 +329,7 @@ classes.reduce((acc, item) => [...acc, ...item.filter(el => el.isExcellent)], []
 // console.log(studentNotExcellent);
 
 let ArrayExcellent1: Array<PupilType> = [];
+// @ts-ignore
 classes.forEach(item => item.forEach(el => !el.isExcellent && (el => el.age > 10 && el.age < 15) ? ArrayExcellent1.push(el) : null));
 console.log(ArrayExcellent1);
 
