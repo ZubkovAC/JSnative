@@ -4,6 +4,8 @@ import './lesson3.css';
 // @ts-ignore
 console.log('lesson 3');
 
+// https://learn.javascript.ru/obtaining-event-object
+// https://learn.javascript.ru/introduction-browser-events#event-object
 // https://ru.reactjs.org/docs/handling-events.html
 // https://ru.reactjs.org/docs/events.html
 // https://developer.mozilla.org/ru/docs/Web/API/Event/currentTarget

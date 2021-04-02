@@ -1,26 +1,27 @@
+// Файл не подключен - проверяйте в браузере / подключайте самостоятельно
 // Разкоменитировать код нельзя только после решения - записи ниже-рядом / на листке
 
 
 //№1
-// Перечислите типи данных ?
+// Перечислите типи данных javascript?
+
 
 //№2
 // Разделите типы  данных в javascript (на категории)
 
+
 //№3
-//  что за тип данных function javascript(){return console.log('hello')
+//  что за тип данных будет после
+//  function javascript(){ return console.log('hello')}
+// console.log (typeof javascript())
+
 
 //№4
-//  какие еще типы данных относятся к пункту 3
+//  назовите способы объявления функций и в двух словах объясните разницу между ними
+
 
 //№5
-//  какие бывают функции ?
-
-//№6
-//  в чем разница функций?
-
-//№7
-// какой будет вывод из функций ниже?
+// какой будет вывод из функций ? ниже
 
 // sayHi1()
 // function sayHi1() {
@@ -44,7 +45,7 @@
 
 
 
-//№8
+//№6
 /*const student = {
     name: "Alex",
     age: 23,
@@ -55,13 +56,24 @@
 // что выведется на экран?
 
 // NewStudent1 = ...student
-// NewStudent2 = {...student}
-// NewStudent3 = student.map((s)=>s)
-// NewStudent4 = {student.map(s=>s)}
+// console.log(NewStudent1)
 
-//№9
+// NewStudent2 = {...student}
+// console.log(NewStudent2)
+
+// NewStudent3 = student.map((s)=>s)
+// console.log(NewStudent3)
+
+// NewStudent4 = {student.map(s=>s)}
+// console.log(NewStudent4)
+
+
+//№7
 // Сделайте глубокую копию  - student -
-// запишите код по коментированию (hard LVL!)
+// запишите код по за коментированым строкам (hard LVL!)
+//
+//  const SuperStudent = student
+//
 //
 //
 //
@@ -69,3 +81,15 @@
 //
 // либо по классике )
 
+const SuperStudent = student
+
+
+
+
+// проверка
+
+console.log('student 0',student.friends[0])
+console.log('SuperStudent 0',SuperStudent.friends[0])
+console.log('проверка',student.friends[0]===SuperStudent.friends[0])
+
+// Лишь истинный Samurai Поймет где он ошибается !

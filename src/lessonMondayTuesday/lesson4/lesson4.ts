@@ -1,6 +1,7 @@
 // @ts-ignore
 console.log('lesson 4');
 
+// https://learn.javascript.ru/object
 // https://learn.javascript.ru/destructuring-assignment
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters
@@ -152,3 +153,6 @@ const {age: personAge} = man;
 
 const manName = ({name}: {name: string}) => console.log(`My name is ${name}`);
 manName(man);
+
+
+
