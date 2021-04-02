@@ -95,3 +95,37 @@ function sortByIncrease (a,b){
 // function sortByIncrease3 ( (a,b) => a - b)
 
 
+let bestStudents = [
+    {
+        name:'Alex',
+        age:22,
+        isMarried:true,
+        scores:85
+    },
+    {
+        name:'Bob',
+        age:21,
+        isMarried:true,
+        scores:93
+    },
+    {
+        name:'John',
+        age:23,
+        isMarried:false,
+        scores:81
+    },
+    {
+        name:'Donald',
+        age:24,
+        isMarried:false,
+        scores:101
+    },
+
+]
+bestStudents.sort((a,b)=> a.age - b.age)
+bestStudents.sort((a,b)=> a.scores - b.scores)
+
+bestStudents.sort((a,b)=> b.scores - a.scores)
+
+let bestName=bestStudents.map(s=>s.name)
+bestName.sort()
