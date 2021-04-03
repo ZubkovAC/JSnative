@@ -7,7 +7,7 @@ console.log('lesson 4');
 // https://learn.javascript.ru/rest-parameters-spread-operator
 // https://medium.com/@stasonmars/%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-spread-%D0%B8-rest-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%B2-javascript-22eb33cb0825
 
-const someArr: Array<number> = [1, 2, 3, 4, 5, 6, 7];
+// const someArr: Array<number> = [1, 2, 3, 4, 5, 6, 7];
 
 // Task 01
 // Дан массив someArr с помощью деструктуризации необходимо:

@@ -68,11 +68,11 @@ testArr4.splice(3, 0, 10);
 //     arr5.push(i);
 // }
 
-let arr5 = new Array(100);
+/*let arr5 = new Array(100);
 
 for (let i = 0; i < arr5.length; i++) {
     arr5[i] = i;
-}
+}*/
 // console.log(arr5);
 
 // arr5.map((item, index, arr) => {
@@ -103,10 +103,10 @@ const arrayOfString: Array<string> = ['I', 'love', 'React', 'but', 'I', 'hate', 
 //  Отcортировать массив по возрастанию. Вывести его в консоль.
 //  Получить массив, отсортрованный в обратном порядке, и вывести его в консоль.
 
-let arr6 = [];
+/*let arr6 = [];
 for (let i = 0; i < 20; i++) {
     arr6.push(Math.floor(Math.random() * 20) + 1);
-}
+}*/
 // 1
 //let sortedArray = arr6.sort((a,b) => a - b);
 // 2
@@ -165,7 +165,7 @@ for (let i = 0; i < arrayOfRandomNumbers.length; i++) {
 negativeNumbers.sort((a,b) => a - b);
 
 //3
-let arr7 = [...arrayOfRandomNumbers].filter(item => item >= -1 && item <= 5).sort();
+// let arr7 = [...arrayOfRandomNumbers].filter(item => item >= -1 && item <= 5).sort();
 //4
 const stringArr = arrayOfRandomNumbers.map(item => item.toString());
 // const stringArr = arrayOfRandomNumbers.map(item => item + '');
@@ -377,5 +377,5 @@ console.log(ordinaryPupil)
 //     //@ts-ignore
 //     return Math.max.apply(null, result);
 // }
-//
+//asdfsdf
 // console.log(solve([[-11,-6],[-20,-20],[18,-4],[-20, 1]]));

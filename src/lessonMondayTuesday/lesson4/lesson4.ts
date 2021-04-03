@@ -112,7 +112,7 @@ let someAll = (...nums: Array<number>): number => nums.reduce((prev, item) => pr
 someAll(...someArr);
 
 
-type PersonType = {
+/*type PersonType = {
     name: string;
     age: number;
     hasHighEducation: boolean;
@@ -127,7 +127,7 @@ let man: PersonType = {
     hasHighEducation: true,
     isHealthy: true,
     accountBalance: 5000,
-}
+}*/
 
 // Task 04
 // Дан объект man с помощью деструктуризации необходимо:
@@ -143,7 +143,7 @@ const {name, age} = man;
 //const name = man.name;
 //const age = man.age;
 //2
-man = {...man, isGreedy: false};
+// man = {...man, isGreedy: false};
 //3
 const {age: personAge} = man;
 
