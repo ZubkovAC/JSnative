@@ -2,14 +2,14 @@
 console.log('lesson 1');
 
 ////////// The helpful links for lesson
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures
-// https://learn.javascript.ru/object
-// https://learn.javascript.ru/array
-// https://metanit.com/web/javascript/3.2.php
-// https://learn.javascript.ru/function-basics
-// https://learn.javascript.ru/arrow-functions-basics
-// https://learn.javascript.ru/while-for
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures                 типы данных
+// https://learn.javascript.ru/object                                                    Объеты
+// https://learn.javascript.ru/array                                                     Массивы
+// https://metanit.com/web/javascript/3.2.php                                    Область видимости переменных
+// https://learn.javascript.ru/function-basics                                          function
+// https://learn.javascript.ru/arrow-functions-basics                                   function+
+// https://learn.javascript.ru/while-for                                                For & While
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math     Math
 
 // The helpful links about js
 // https://learn.javascript.ru/
