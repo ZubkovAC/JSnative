@@ -1,0 +1,68 @@
+.currency {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 5px;
+}
+.currencyNames {
+    display: flex;
+    padding: 10px;
+}
+.currencyNames p{
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.currencyNames lu{
+    float: right;
+}
+li{
+    display: inline-block;
+    width: 70px;
+    padding: 5px;
+    margin: 5px;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}
+.currencyAction{
+    background-color: wheat;
+}
+.active{
+    background-color:cornflowerblue;
+}
+.fields{
+    font-size: 20px;
+    margin: 15px;
+}
+.false{
+    background-color: white;
+}
+span{
+    box-shadow: 0 0 15px 0 white;
+    padding: 5px 55px;
+    display:inline-block;
+    width: 150px;
+    justify-content: center;
+    align-content: center;
+    margin:0 35px;
+    border-radius: 5px;
+}
+h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+label{
+    display: block;
+    width: 100%;
+}
+input{
+    margin: 5px;
+    display: block;
+    height: 30px;
+}
+.activeCurrency {
+    background-color:cornflowerblue;
+}

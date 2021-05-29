@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Currency.module.css';
 
 type CurrencyExchangePropsType = {
     currenciesName: string[];
@@ -48,16 +49,16 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
     );
 
     return (
-        <div className="currency">
+        <div className={css.currency}>
             <h2>Currency exchange</h2>
-            <div className="currency-names">
+            <div className={css.currencyNames}>
                 <p>Current currency:</p>
                 <ul>
                     {currenciesName.map((currency: string, index: number) => {
                         return (
                             <li
                                 key={`${index}-${currency}`}
-                                className={`currencies ${currentCurrency === currency ? 'activeCurrency' : null}`}
+                                className={currentCurrency === currency ? css.activeCurrency : 'null' }
                                 onClick={changeCurrentCurrency}
                                 data-currency={currency}
                             >
@@ -67,15 +68,15 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
                     })}
                 </ul>
             </div>
-            <div className="currency-action">
-        <span className={isBuying ? 'active' : ''} data-action="buy" onClick={changeAction}>
+            <div className={css.currencyAction}>
+        <span className={isBuying ? css.active : css.false} data-action="buy" onClick={changeAction}>
           Buy
         </span>
-                <span className={isBuying ? '' : 'active'} data-action="sell" onClick={changeAction}>
+                <span className={isBuying ? css.false : css.active} data-action="sell" onClick={changeAction}>
           Sell
         </span>
             </div>
-            <div className="fields">
+            <div className={css.fields}>
                 <p>Currency rate: {currencyRate}</p>
                 {viewCurrency}
             </div>

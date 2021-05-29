@@ -90,13 +90,13 @@ const mapStateToProps = ( { currency } : {currency: CurrencyState} ): CurrencySt
 const mapDispatchToProps = (dispatch: Dispatch<CurrencyReducersTypes>) : any => {
     return {
         setCurrencyAmount(amountOfBYN: string, amountOfCurrency: string) {
-            dispatch(ChangeCurrencyFieldAC(amountOfBYN, amountOfCurrency));
+            dispatch(ChangeCurrencyFieldAC(amountOfBYN, amountOfCurrency)); //Поле Изменить валюту AC
         },
         setAction(isBuying: boolean) {
-            dispatch(ChangeActionAC(isBuying));
+            dispatch(ChangeActionAC(isBuying)); //Изменение действия AC
         },
         changeCurrency(currency: string) {
-            dispatch(СhangeCurrentCurrencyAC(currency));
+            dispatch(СhangeCurrentCurrencyAC(currency)); // Изменение текущей валюты AC
         },
     };
 };
