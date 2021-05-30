@@ -1,6 +1,8 @@
 // @ts-ignore
 console.log('lesson 2');
 
+
+
 ////////// The helpful links about arrays
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
 // https://learn.javascript.ru/array
