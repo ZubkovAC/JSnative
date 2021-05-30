@@ -21,17 +21,67 @@ console.log('lesson 2');
 // https://www.youtube.com/watch?v=Kuq6oIN3PH0
 
 
+//Область видимости
+// {}- anonimous code , if/else , switch/case, function(){} , loops ( for, while, do while), try/catch
+// при этом объект не имеет области видимости
+
+// пример
+// let a = 10
+// function f(){
+//     // let a = 100
+//     function f1(){
+//         console.log(a)   // if a == 100 : undefined => a ==10 : undefined
+//     }
+//     f1()
+// }
+// f()
+
+
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
 
+// function d(a:number){
+//     return function d1(b:number){
+//         return a + b
+//     }
+// }
+//
+// const promt = d(3)(6)
+// console.log(promt)
+
+
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
+// function makeCounter() {
+//     let count = 0
+//     return {
+//          counter (){
+//            return ++count
+//         }
+//     }
+// }
 // const counter = makeCounter();
-// counter(); // 1
-// counter(); // 2
 // const counter2 = makeCounter();
-// counter2(); // 1
-// counter(); // 3
+// console.log(counter.counter())
+// console.log(counter.counter())
+// console.log(counter2.counter())
+// console.log(counter.counter())
+
+
+// function makeCounter() {
+//     let count = 0
+//     return function counter() {
+//         return ++count
+//     }
+// }
+//
+// const counter = makeCounter();
+// const counter2 = makeCounter();
+// console.log(counter())
+// console.log(counter())
+// console.log(counter2())
+// console.log(counter())
+
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
@@ -40,6 +90,56 @@ console.log('lesson 2');
 // decrease: -1
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
+
+
+// function makeCounter2(n:number) {
+//     let counter = n
+//     return {
+//         increase() {
+//             return ++counter
+//         },
+//         decrease() {
+//             return --counter
+//         },
+//         reset() {
+//             return counter = 0
+//         },
+//         set(a: number) {
+//             return counter = a
+//         }
+//     }
+// }
+// let cout = makeCounter2(10)
+// console.log(cout.increase())
+// console.log(cout.increase())
+// console.log(cout.increase())
+// console.log(cout.decrease())
+// console.log(cout.reset())
+// console.log(cout.set(10))
+
+
+// function makeCounter2(num:number) {
+//     return {
+//         increase:()=> ++num,
+//         decrease:()=> --num,
+//         reset() {
+//             return num = 0
+//         },
+//         set(a: number) {
+//             return num = a
+//         },
+//         getCount:()=> num
+//     }
+// }
+// let cout = makeCounter2(10)
+// console.log(cout.increase())
+// console.log(cout.increase())
+// console.log(cout.increase())
+// console.log(cout.decrease())
+// console.log(cout.reset())
+// console.log(cout.getCount())
+// console.log(cout.set(10))
+
 
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
@@ -60,4 +160,5 @@ console.log('lesson 2');
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
 // just a plug
-export default () => {};
+export default () => {
+};
