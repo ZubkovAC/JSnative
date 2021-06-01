@@ -14,6 +14,7 @@ console.log('lesson 2');
 // https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-%D1%80%D0%B0%D0%B7-%D0%B8-%D0%BD%D0%B0%D0%B2%D1%81%D0%B5%D0%B3%D0%B4%D0%B0-c211805b6898
 // https://www.youtube.com/watch?v=pahO5XjnfLA
 
+
 //// Сurrying
 // https://learn.javascript.ru/currying-partials
 // https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%BA%D0%B0%D1%80%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B2-javascript-5ec4a1d88827
@@ -341,6 +342,36 @@ console.log('lesson 2');
 
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
+
+// function sumTo(n: number): number {
+//     if (n === 1) return n
+//     return n + sumTo(n - 1)
+// }
+//
+// console.log(sumTo(3))
+//
+// function sumToF(n: number): number {
+//     if (n === 1) return n
+//     return n * sumToF(n - 1)
+// }
+//
+// console.log(sumToF(5))
+
+
+// 1+1 1+1 2+1 3+2 5+3 8+5 13+8
+// Первые два числа равны 1, затем 2(1+1), затем 3(1+2), 5(2+3) и так далее: 1, 1, 2, 3, 5, 8, 13, 21....
+
+// function sumToFub(n: number): number {
+//     return n <= 1 ? n : sumToFub(n - 1) + sumToFub(n - 2);
+// }
+// console.log(sumToFub(7))
+//
+// function sumToFub2(n: number): number {
+//     if (n<=1)return n
+//     return  sumToFub2(n - 1) + sumToFub2(n - 2);
+// }
+// console.log(sumToFub2(8))
+
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
