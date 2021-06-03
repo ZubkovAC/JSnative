@@ -39,6 +39,94 @@ export default ()=>{};
 //  Статические методы объекта Promise
 //  Вот два метода — Promise.reject(reason)и Promise.resolve(value), которые позволяют создавать, соответственно, отклонённые и разрешённые промисы.
 //
+
+
+// let p1 = new Promise ( (rej,res)=>{
+//         res(10)
+//         rej(20)
+// }).then(
+//     (res)=>{
+//         console.log(5)
+//         console.log(res)
+//     },
+//     (rej)=>{
+//         console.log(15)
+//         console.log(rej)
+//     })
+
+// 15 10
+
+
+
+// let p2 = new Promise ( (res,rej)=>{
+//     console.log(5)
+//     setTimeout ( ()=>{
+//         console.log(10)
+//         res(15)
+//         console.log(20)
+//     },0)
+//     rej(console.log(25))
+// })
+//     .then(
+//     //@ts-ignore
+//     (res)=> console.log(res),
+//     //@ts-ignore
+//     (rej) =>console.log(rej))
+//     .then(
+//     //@ts-ignore
+//     (res)=> console.log(res+5),
+//     //@ts-ignore
+//     (rej) =>console.log(rej+5))
+
+// 5 25 undefined NaN 10 20
+
+
+
+// function foo(){
+//     return console.log(0)
+// }
+//
+// let p3 = new Promise ( (res,rej)=>{
+//     setTimeout(()=>{
+//         console.log(5)
+//         rej(10)
+//     },0)
+//     foo()
+//     console.log(20)
+//     res(15)
+// })
+//     .then(res=>console.log(res))
+//     .catch(err=>console.log(err))
+
+// 0 20 15 5
+
+
+
+// console.log(0)
+// let p4 = new Promise(
+//     (res,rej)=>{
+//     setInterval(()=>{
+//         console.log(5)
+//         res(10)
+//     },750)
+//         console.log(15)
+//     setTimeout(()=>{
+//         console.log(20)
+//         rej(25)
+//         }
+//         ,500)
+// })
+//     .then(res=>{console.log(res)})
+//     .catch(err=>console.log(err))
+//     .then(res=>console.log(res))
+//     .catch(err=>console.log(err))
+// console.log(30)
+
+// 0 15 30 20 25 undefined 555555
+
+
+
+
 //
 //
 //
