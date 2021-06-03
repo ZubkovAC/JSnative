@@ -18,3 +18,50 @@ console.log('lesson 3');
 
 // just a plug
 export default ()=>{};
+//  Что такое промис?
+//
+//  new Promise((res,rej)=>{
+//      let a = 10
+//      let b = 15
+//      res(console.log(a +b ) )   // сначала Сихронно вызовет консоль лог после вернет андефинед
+//}).then((r)=> console.log(r)
+//  console.log(15)
+//   25 15 undefined
+//
+// Какие бывают состояния у промисов ?  pending => reject  , fulfilled
+//   Throw = error (rej), return = res
+//
+//  Методы прототипа объекта Promise
+//  Promise.prototype.catch(onRejected)
+//  Promise.prototype.then(onFulfilled, onRejected)
+//  Promise.prototype.finally(onFinally)
+//
+//  Статические методы объекта Promise
+//  Вот два метода — Promise.reject(reason)и Promise.resolve(value), которые позволяют создавать, соответственно, отклонённые и разрешённые промисы.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

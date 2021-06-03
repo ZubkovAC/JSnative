@@ -373,6 +373,65 @@ console.log('lesson 2');
 // console.log(sumToFub2(8))
 
 
+// function factor (n:number):number{
+//     if (n==1)return n
+//     return n * factor(n-1)
+// }
+//
+// console.log(factor(13))
+
+// let list = {
+//     value: 1,
+//     next: {
+//         value: 2,
+//         next: {
+//             value: 3,
+//             next: {
+//                 value: 4,
+//                 next: null
+//             }
+//         }
+//     }
+// };
+//
+// function printList(list:any) {
+//     let tmp = list;
+//     while (tmp) {
+//         console.log(tmp.value);
+//         tmp = tmp.next;
+//     }
+// }
+// printList(list)
+//
+// function printReverseList(list:any) {
+//     let arr = [];
+//     let tmp = list;
+//
+//     while (tmp) {
+//         arr.unshift(tmp.value);
+//         tmp = tmp.next;
+//     }
+//
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         console.log( arr[i] );
+//     }
+// }
+//
+// printReverseList(list)
+
+//
+// function rec(n:number):number{
+//     if (n <= 1 )return n
+//     return   rec(n-1)+ rec(n-2)
+// }
+// let test = 10
+// for (let x = 0 ; x < test ; x++){
+//     console.log(rec(x))
+// }
+
+
+
+
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
