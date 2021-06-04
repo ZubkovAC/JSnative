@@ -57,7 +57,6 @@ console.log('lesson 4');
 // }).then(console.log)
 
 
-
 // Task 05
 // Создайте литерал объекта handlePromise со следующими свойствами:
 // promise, resolve, reject, onSuccess, onError
@@ -80,6 +79,25 @@ console.log('lesson 4');
 // Добавьте два метода then и передайте созданные функции.
 
 
+// function onSuccess(N: any) {
+//     return `${N} - Aleksander`
+// }
+// function print(d: any) {
+//     console.log(d)
+// }
+
+// let Task6 = new Promise((res, rej) => {
+//     setTimeout(res, 1000, 'My name is')
+// })
+// .then(res => {
+//     onSuccess(res)
+// })
+// .then(res => print(res))
+// v2
+//     .then(onSuccess).then(print)
+//
+
+
 // Task 7
 // Создайте три промиса. Первый промис возвращает объект { name: "Anna" } через 2с,
 // второй промис возвращает объект {age: 16} через 3 с, а третий {city: ''} через 4с.
@@ -88,8 +106,43 @@ console.log('lesson 4');
 
 
 
+let Name = new Promise((resolve, reject) => {
+    let name = {name: 'Anna'}
+    setTimeout(resolve, 2000, name)
+})
+let Age = new Promise((resolve, reject) => {
+    let age = {age: 16}
+    setTimeout(resolve, 3000, age)
+})
+let City = new Promise((resolve, reject) => {
+    let city = {city: ''}
+    setTimeout(resolve, 4000, city)
+})
+let abc = Promise.all([Name, Age, City])
+ // .then((res) => (res)).then(console.log)
+ .then(([a, b, c]: any[]) => ({...a, ...b, ...c})).then(console.log)
+
+
+// let Name: Promise<Object> = new Promise((resolve, reject) => {
+//     let name = {name: 'Anna'}
+//     setTimeout(resolve, 2000, name)
+// })
+// let Age: Promise<Object> = new Promise((resolve, reject) => {
+//     let age = {age: 16}
+//     setTimeout(resolve, 3000, age)
+// })
+// let City: Promise<Object> = new Promise((resolve, reject) => {
+//     let city = {city: ''}
+//     setTimeout(resolve, 4000, city)
+// })
+// let abc: Promise<Array<Object>> = Promise.all([Name, Age, City])
+//
+// abc.then(([a, b, c]: Array<Object>) => ({...a, ...b, ...c})).then(console.log)
+
+
 // just a plug
-export default ()=>{};
+export default () => {
+};
 
 //
 // for (var x = 0 ; x < 10 ; x++){
