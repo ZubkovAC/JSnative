@@ -2,6 +2,7 @@ import React from 'react';
 import './lessons/lesson1/lesson1';
 import './lessonDegree34/lesson2/lesson2.ts';
 import './lessonDegree34/lesson3/lesson_3.ts';
+import './lessonDegree34/lesson4/lesson_4.ts';
 
 
 function App() {

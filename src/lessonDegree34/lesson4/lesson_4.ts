@@ -8,24 +8,54 @@ console.log('lesson 4');
 // Создайте промис, который постоянно находиться в состоянии pending.
 // В конструкторе промиса выведите в консоль сообщение "Promise is created".
 
+// let Task1 = new Promise ((res,rej)=>{
+//  console.log('Promise is created')
+// })
+// console.log(Task1)
 
 // Task 02
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
 
+// let Task2 = new Promise ((res,rej)=>{
+//     res('Promise Data')
+// })
+//     .then(res=>console.log(res))
+
+// Promise.resolve('Promise Data2').then(console.log)
 
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
 
+// let Task3 = new Promise((res,rej)=>{
+//     rej('Promise Error')
+// })
+//     .catch(err=>console.log(err))
+//
+//
+// Promise.reject('Promise Error2').catch(console.log)
+// Promise.reject('Promise Error2').then(console.log,console.log)
 
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
+
+// let Task4 = new Promise((res,rej)=>{
+//     setTimeout(()=>{
+//         let a = 'Promise Data'
+//         res(a)
+//     },3000)
+// }).then(console.log)
+
+// let Task41 = new Promise((res,rej)=>{
+//     setTimeout(res,3000,'Promise Data N')
+// }).then(console.log)
+
 
 
 // Task 05
@@ -61,17 +91,17 @@ console.log('lesson 4');
 // just a plug
 export default ()=>{};
 
-
-for (var x = 0 ; x < 10 ; x++){
-    setTimeout ( ()=> {
-        console.log(x)
-    },1000)
-}
-for (let x = 0 ; x < 10 ; x++){
-    setTimeout ( ()=> {
-        console.log(x)
-    },1000)
-}
+//
+// for (var x = 0 ; x < 10 ; x++){
+//     setTimeout ( ()=> {
+//         console.log(x)
+//     },1000)
+// }
+// for (let x = 0 ; x < 10 ; x++){
+//     setTimeout ( ()=> {
+//         console.log(x)
+//     },1000)
+// }
 //
 // как сделать чтобы последовательно выводились значения x?
 // for (var x = 0 ; x < 10 ; x++){
