@@ -1,0 +1,67 @@
+.red{
+    color:red;
+}
+.blue{
+    color:blue;
+}
+div{
+    font-size: 20px;
+    background-color: goldenrod;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+img {
+    width: 200px;
+}
+li{
+    font-family: sans-serif;
+    padding: 5px 20px;
+    background-color: #990000;
+    font-size: 30px;
+    color:white;
+    display: inline-block;
+}

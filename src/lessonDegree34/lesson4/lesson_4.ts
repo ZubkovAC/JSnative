@@ -106,21 +106,21 @@ console.log('lesson 4');
 
 
 
-let Name = new Promise((resolve, reject) => {
-    let name = {name: 'Anna'}
-    setTimeout(resolve, 2000, name)
-})
-let Age = new Promise((resolve, reject) => {
-    let age = {age: 16}
-    setTimeout(resolve, 3000, age)
-})
-let City = new Promise((resolve, reject) => {
-    let city = {city: ''}
-    setTimeout(resolve, 4000, city)
-})
-let abc = Promise.all([Name, Age, City])
- // .then((res) => (res)).then(console.log)
- .then(([a, b, c]: any[]) => ({...a, ...b, ...c})).then(console.log)
+// let Name = new Promise((resolve, reject) => {
+//     let name = {name: 'Anna'}
+//     setTimeout(resolve, 2000, name)
+// })
+// let Age = new Promise((resolve, reject) => {
+//     let age = {age: 16}
+//     setTimeout(resolve, 3000, age)
+// })
+// let City = new Promise((resolve, reject) => {
+//     let city = {city: ''}
+//     setTimeout(resolve, 4000, city)
+// })
+// let abc = Promise.all([Name, Age, City])
+//  // .then((res) => (res)).then(console.log)
+//  .then(([a, b, c]: any[]) => ({...a, ...b, ...c})).then(console.log)
 
 
 // let Name: Promise<Object> = new Promise((resolve, reject) => {
@@ -165,4 +165,106 @@ export default () => {
 //     }
 //     foo(x)
 // }
+
+// Максим
+// Артем
+// Андрей
+
+// string number boolean object symbol bigInt undefined
+
+
+// bubble sort
+
+//
+// for ( let a = 0 ; a < arr.length; a++){
+//     let first = a
+//     for (  let b = 0 ; b < arr.length; b++){
+//         if( arr[a] < arr[first] ){
+//             first = b
+//
+//         }
+//
+//     }
+//
+// }
+//        [1,2,3,54,71,8,654,2343,2345]
+//        [1,2,3,54,71,8,654,2345,2343]
+//        [1,2,3,54,71,654,8,2345,2343]
+
+
+// let arr = [1,2,3,54,654,71,8,2345,2345]
+//
+//
+//
+// for (let i = 0; i < arr.length; i++) {
+//
+//     for (let j = 0; j < arr.length-i; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//             let swap = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = swap;
+//         }
+//     }
+// }
+//
+//
+//
+// let i = 0
+// while(i<arr.length){
+//     for (let j = 0; j < arr.length; j++) {
+//
+//         if (arr[j] > arr[j + 1]) {
+//             let swap = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = swap;
+//         }
+//     }
+// }
+//
+// console.log(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

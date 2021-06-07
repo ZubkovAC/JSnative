@@ -17,7 +17,8 @@ console.log('lesson 3');
 
 
 // just a plug
-export default ()=>{};
+export default () => {
+};
 //  Что такое промис?
 //
 //  new Promise((res,rej)=>{
@@ -57,7 +58,6 @@ export default ()=>{};
 // 15 10
 
 
-
 // let p2 = new Promise ( (res,rej)=>{
 //     console.log(5)
 //     setTimeout ( ()=>{
@@ -81,7 +81,6 @@ export default ()=>{};
 // 5 25 undefined NaN 10 20
 
 
-
 // function foo(){
 //     return console.log(0)
 // }
@@ -99,7 +98,6 @@ export default ()=>{};
 //     .catch(err=>console.log(err))
 
 // 0 20 15 5
-
 
 
 // console.log(0)
@@ -124,10 +122,84 @@ export default ()=>{};
 
 // 0 15 30 20 25 undefined 555555
 
-
-
-
+// let p1 = new Promise((res, rej) => {
+//     console.log(1)
+//     res(2)
+//     rej(3)
+// })
+// let p2 = new Promise((res, rej) => {
+//     res(4)
+//     rej(5)
+// })
 //
+// p1.then(res => {
+//     return 6
+//     console.log(res)
+// })
+//     .then(console.log)
+//
+// p2.then(res => {
+//     console.log(res)
+//     return 7
+// })
+//     .then(console.log)
+
+// 1 4 6 7
+
+// function f(){
+//     return console.log(7)
+// }
+// let p1 = new Promise ((res,rej)=>{
+//     console.log(1)
+//     setTimeout(()=>{
+//         console.log(2)
+//         rej(3)
+//     },0)
+//     res(4)
+// })
+//     .then(res=>{
+//         console.log(5)
+//        f()
+//         console.log(res)
+//     })
+// console.log(6)
+
+// 1 6 5 7 4 2
+
+
+// function f1 (n:number){
+//     console.log(n)
+// }
+//
+// let p1  = new Promise((res, rej)=>{
+//     setTimeout(()=>{
+//         console.log(1)
+//         rej()
+//     },100)
+//     console.log(2)
+//     res(3)
+// })
+//     .then(res=>{
+//         console.log(res)
+//         return 4
+//     })
+//     .then(console.log)
+// console.log(5)
+// let p2  = new Promise((res, rej)=> {
+//     console.log(6)
+//     setTimeout(f1, 0, 10,20,30)
+//     rej(7)
+// })
+//     .then(res=>{
+//         console.log(res)
+//     })
+//     .catch(console.log)
+
+// 1 5 6 3 4 7 10 1
+
+
+
+
 //
 //
 //
