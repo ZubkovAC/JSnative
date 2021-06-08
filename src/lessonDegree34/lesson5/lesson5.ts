@@ -80,3 +80,149 @@ function sumTwoNumbers(a:number,b:number):number {return a + b};
 
 // just a plug
 export default () => {};
+
+// function f () {
+//     console.log('funciton', this)
+// }
+// f()
+
+// let obj = {name:'Alex'}
+//
+// obj.f = f
+// obj.f()
+// obj={
+//     name:'Alex'
+//     f:function f (){console.log('function',this)}
+// }
+// console.log(obj)
+
+// obj.k = function(){
+//     console.log('obj.k',this)
+//     f()     // window.f()
+//     this.f()// obj.f()
+// }
+
+
+// obj.k = function(){
+//     console.log('obj.k',this)
+//     f()     // window.f()
+//     setTimeout(function(){console.log('function setTimeout',this)},0) // window.console.log(function) u33a setTimeout
+// }
+// obj.k()
+
+// let arrow = ()=>{
+//     console.log('arrrow function ', this)
+//     // у устрелочных функций нету this . они ее берут ее в контексте в котором определена
+// }
+// arrow()
+
+// function FF () {
+//     console.log('function FF',this)
+//     return ()=> console.log('arrow function', this)
+//     // у function FF  this = window
+//     // у ()=> контекст в котором определена - function - window
+// }
+// FF()()
+
+// obj.ff=FF
+// obj.ff()();
+// у function -> this -> obj , у стрелочной function -> obj .
+
+// obj.ff=FF()
+// obj.ff()
+//window x2 получается что до вызова нету стрелочной функции и только после вызова она ссылается на контекст
+// а в момент вызова ее this - window
+
+// obj.ff = FF
+// let someFunc = obj.ff()
+// someFunc();
+// объект так как obj => ff()
+
+// let arrow = ()=>{
+//     console.log('arrrow function ', this)
+//     setTimeout(function(){console.log('funciton SeT',this)},0)
+//     setTimeout(()=>console.log('arrow set',this), 0 )
+// }
+// arrow()
+// 3 window
+
+// let obj = {
+//     name:'Alex',
+//     arrow:()=>{
+//         console.log('arrow function',this);
+//         setTimeout(function(){console.log('function set',this)},0)
+//         setTimeout(()=>console.log('arrow setTimeout',this),0)
+//     }
+// }
+// obj.arrow()
+// 3 window  - 1 так как у объекта нету области видимости ,
+// 2-3 function сслается на область видимости - window,
+
+// let obj = {
+//     name:'Alex',
+//     arrow:()=>{
+//         console.log('arrow function',this);
+//         setTimeout(function(){console.log('function set',this)},0)
+//         setTimeout(()=>console.log('arrow setTimeout',this),0)
+//     },
+//     dec(){
+//         console.log('arrow function',this);
+//         setTimeout(function(){console.log('function set',this)},0)
+//         setTimeout(()=>console.log('arrow setTimeout',this),0)
+//     }
+//     dec:function(){} аналог
+// }
+// obj.dec()
+//  object так как ссылается на объект
+//  window так как браузерная АПИ
+//  object так как стрелка сслается на момент определения  => object
+
+
+// let obj = {
+//     name:'Alex',
+//     arrow:()=>{
+//         return ()=> console.log(this)
+//     },
+//     arrow2:()=>{
+//         return function (){console.log(this)}
+//     },
+//     dec(){
+//         return function (){console.log(this)}
+//     },
+//     dec2(){
+//         return ()=> console.log(this)
+//     }
+// }
+//
+// let obj2={name:'Pomudor'}
+// obj2.arrow=obj.arrow
+// obj2.arrow()()
+// window так как нету контекста
+
+// obj2.arrow=obj.arrow()
+// obj2.arrow()
+// 2 стрелки поэтому window
+
+// obj2.arrow2=obj.arrow2
+// obj2.arrow2()()
+// window так как нету контекста
+
+// obj2.arrow2=obj.arrow2()
+// obj2.arrow2()
+// {name:'Pomudor'}  так как функция не имееет зыс и ссылает на то место где она определена
+
+// obj2.dec=obj.dec
+// obj2.dec()()
+// window this не передается через замыкание (тоесть теряет this)
+
+// obj2.dec=obj.dec()
+// obj2.dec()
+// {name:'Pomudor'}  так как функция не имееет зыс и ссылает на то место где она определена
+
+// obj2.dec2=obj.dec2
+// obj2.dec2()()
+// {name:'Pomudor'}  так как функция не имееет зыс и ссылает на то место где она определена
+
+// obj2.dec2=obj.dec2()
+// obj2.dec2()
+// name:'Alex',
