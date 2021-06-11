@@ -166,11 +166,8 @@ export default () => {
 //     foo(x)
 // }
 
-// Максим
-// Артем
-// Андрей
 
-// string number boolean object symbol bigInt undefined
+
 
 
 // bubble sort
@@ -212,7 +209,6 @@ export default () => {
 // let i = 0
 // while(i<arr.length){
 //     for (let j = 0; j < arr.length; j++) {
-//
 //         if (arr[j] > arr[j + 1]) {
 //             let swap = arr[j];
 //             arr[j] = arr[j + 1];
@@ -222,49 +218,4 @@ export default () => {
 // }
 //
 // console.log(arr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

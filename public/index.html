@@ -9,5 +9,18 @@
 </head>
 <body>
 <div id="root"></div>
+<script>
+    let p = Promise.all( [
+        new Promise((res,rej)=>{
+            res({name:'Alex'})
+        }),
+        new Promise((res,rej)=>{
+            res({age:99})
+        }),
+        new Promise((res,rej)=>{
+            res({city:'Bobryisk'})
+        })
+    ]).then(res=> console.log (res.reduce((acc,el)=>({...acc,...el}))))
+</script>
 </body>
 </html>

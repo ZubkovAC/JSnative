@@ -105,7 +105,7 @@
 // console.log(c)
 // var e = 100
 
-//1 , undefined , 2 , error , undefined , 10 , undefined , 10
+
 
 // console.log(a)
 // var a = 10

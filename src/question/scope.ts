@@ -1,5 +1,9 @@
+//Область видимости
+// {}- anonimous code , if/else , switch/case, function(){} , loops ( for, while, do while), try/catch
+// при этом объект не имеет области видимости
 
-// 1)
+
+// -1-
 // if (true){
 //     var a = 2
 // }
@@ -12,7 +16,7 @@
 // console.log(a)
 
 
-// 2)
+// -2-
 // let a = 1
 // console.log(a)
 // console.log(b)
@@ -29,7 +33,7 @@
 // var e = 100
 
 
-// 3)
+// -3-
 // console.log(a)
 // var a = 10
 // console.log(a)
@@ -39,7 +43,7 @@
 // console.log(a)
 
 
-// 4-5)?
+// -4-5-
 // var a = 50
 // function f(){
 //     a = 100
@@ -61,7 +65,7 @@
 // console.log(e)
 
 
-// 6)
+// -6-
 // const man1 = {
 //     fname1:'petr'
 // }
@@ -75,7 +79,7 @@
 // console.log(man2[fname2]='Xpenova')
 
 
-// 7)
+// -7-
 // const man = {
 //     fname: '09'
 // }
@@ -88,7 +92,36 @@
 // console.log(man[obj1])
 
 
-// 8)
+//-8-
+// console.log(a)
+// console.log(b)
+// {
+//     let a = 1
+//     var b = 2
+// }
+// console.log(a)
+// console.log(b)
+//
+// const firstName = {
+//     a:3
+// }
+// console.log(a)
+// console.log(b)
+// {
+//     a = 4
+//     b = 5
+// }
+// console.log(a)
+// console.log(b)
+// function f2(){
+//     var c = 6
+//     let c = 7
+// }
+// console.log(a)
+// console.log(b)
+
+
+// -9-
 // for (let x = 0 ; x < 10; x++){
 //     setTimeout(()=>console.log(x),1000)
 // }
@@ -96,6 +129,24 @@
 //     setTimeout(()=>console.log(x),1000)
 // }
 
+// -10-
+// for (var a =0 ; a < 10 ; a++ ){
+//     setTimeout(()=>console.log(a))
+// }
+// a = 0
+// setTimeout(()=>console.log(a),10)
 
+// -11-
+// let a = 5
+// {
+//      a = 10
+// }
+// console.log(a)
+// function f2() {
+//     console.log (a)
+//     var b = 20
+// }
+// console.log(b)
+// f2()
 
 
