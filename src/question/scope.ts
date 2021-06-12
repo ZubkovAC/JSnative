@@ -56,14 +56,13 @@
 //     const e = 400
 // }
 // f()
-//да нет
-
 // console.log(a)
 // console.log(b)
 // console.log(c)
 // console.log(d)
 // console.log(e)
 
+//да нет
 
 // -6-
 // const man1 = {
@@ -149,4 +148,22 @@
 // console.log(b)
 // f2()
 
+// -12-
+// {
+//     let c = 100
+//     var family = 'it-incubator'
+//     function f(){
+//         console.log(c)
+//     }
+// }
+// let doc = false
+// if (!doc){
+//     function c(){
+//         console.log(family)
+//     }
+// }
+// f()
+// c()
+//console.log(family)
+//console.log(c)
 

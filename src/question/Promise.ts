@@ -209,3 +209,21 @@
 //v3 parse
 // .then(res=>{console.log(...res)})
 
+// Race
+// Promise.race([
+//     new Promise((res, rej) => {
+//         setTimeout(() => {
+//             rej('ypa')
+//         }, 3)
+//         setTimeout(() => {
+//             res()
+//         }, 4)
+//     }),
+//     new Promise((res, rej) => {
+//         setTimeout(() => {
+//             rej('ypa')
+//         }, 2)
+//         setTimeout(() => {
+//             res()
+//         }, 5)
+//     })]).then(console.log)
