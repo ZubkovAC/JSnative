@@ -31,16 +31,6 @@ console.log('lesson 2');
 // {}- anonimous code , if/else , switch/case, function(){} , loops ( for, while, do while), try/catch
 // при этом объект не имеет области видимости
 
-// пример
-// let a = 10
-// function f(){
-//     // let a = 100
-//     function f1(){
-//         console.log(a)   // if a == 100 : undefined => a ==10 : undefined
-//     }
-//     f1()
-// }
-// f()
 
 
 // Task 01
@@ -190,7 +180,7 @@ console.log('lesson 2');
 
 // function factorial (n:number):number{
 //     if (n===1)return n
-//     return n * factorial(n-1)
+//     return n + factorial(n-1)
 // }
 // console.log(factorial(5))
 
@@ -245,8 +235,11 @@ console.log('lesson 2');
 // console.log(superSum(0))
 // console.log(superSum(3)(2)(5,3))
 // console.log(superSum(3)(2,5,3))
+
 // console.log(superSum(3)(2,5)(3))
 // console.log(superSum(3)(2,5)(3,9))
+// console.log(superSum(3)(2,5,2)(5)(3)) //- error
+
 
 // P.S. типизируйте только аргументы, а при вызове функции используйте @ts-ignore
 

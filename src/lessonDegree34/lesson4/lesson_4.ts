@@ -219,3 +219,8 @@ export default () => {
 //
 // console.log(arr)
 
+
+let p = new Promise((res,rej)=>{
+    var a = 100
+    res(10)
+}).then((res)=>console.log(res))

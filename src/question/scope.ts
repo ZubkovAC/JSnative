@@ -2,9 +2,19 @@
 // {}- anonimous code , if/else , switch/case, function(){} , loops ( for, while, do while), try/catch
 // при этом объект не имеет области видимости
 
+// -0-
+// let a = 10
+// function f(){
+//     // let a = 100
+//     function f1(){
+//         console.log(a)   // if a == 100 : undefined => a ==10 : undefined
+//     }
+//     f1()
+// }
+// f()
 
 // -1-
-// if (true){
+// {
 //     var a = 2
 // }
 // function vodka (){
@@ -14,6 +24,7 @@
 // console.log(a)
 // vodka()
 // console.log(a)
+//
 
 
 // -2-
