@@ -3,17 +3,22 @@
 // при этом объект не имеет области видимости
 
 // -0-
+
 // let a = 10
 // function f(){
+//     console.log(a)
 //     // let a = 100
 //     function f1(){
-//         console.log(a)   // if a == 100 : undefined => a ==10 : undefined
+//         console.log(a)
 //     }
 //     f1()
 // }
 // f()
+// console.log(a)
+
 
 // -1-
+
 // {
 //     var a = 2
 // }
@@ -24,7 +29,6 @@
 // console.log(a)
 // vodka()
 // console.log(a)
-//
 
 
 // -2-
@@ -73,7 +77,8 @@
 // console.log(d)
 // console.log(e)
 
-//да нет
+// 50
+
 
 // -6-
 // const man1 = {
@@ -85,8 +90,11 @@
 // let fname1 = 'Egorich'
 // let fname2 = 'Petrovich'
 //
-// console.log(man1[fname1]='Petrysha')
-// console.log(man2[fname2]='Xpenova')
+// man1[fname1]='Petrysha'
+// man2[fname2]='Xpenova'
+//
+// console.log(man1)
+// console.log(man2)
 
 
 // -7-
@@ -100,6 +108,7 @@
 // man[obj2] = 456
 //
 // console.log(man[obj1])
+// console.log(man)
 
 
 //-8-
@@ -149,15 +158,17 @@
 // -11-
 // let a = 5
 // {
-//      a = 10
+//     a = 10
 // }
 // console.log(a)
 // function f2() {
 //     console.log (a)
+//     a = 20
 //     var b = 20
 // }
 // console.log(b)
 // f2()
+// console.log(a)
 
 // -12-
 // {
@@ -175,6 +186,15 @@
 // }
 // f()
 // c()
-//console.log(family)
-//console.log(c)
+// console.log(family)
+// console.log(c)
 
+
+
+
+// for (var a =0 ; a < 10 ; a++ ){
+//
+//     setTimeout((a)=>{
+//         console.log(a)
+//     },0 , a)
+// }

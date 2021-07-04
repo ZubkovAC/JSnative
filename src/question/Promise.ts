@@ -1,4 +1,3 @@
-
 // 1)
 // let p1 = new Promise ( (rej,res)=>{
 //         res(10)
@@ -12,6 +11,12 @@
 //         console.log(15)
 //         console.log(rej)
 //     })
+
+// for (var x = 0 ; x < 10; x++){
+//     ((a)=>{
+//         setTimeout(()=>console.log(a),1000)})
+//     (x)
+// }
 
 
 // 2)
@@ -120,7 +125,6 @@
 // console.log(6)
 
 
-
 // 7)
 // function f1 (n:number){
 //     console.log(n)
@@ -186,7 +190,6 @@
 // ]).then(res=> console.log (res.reduce((acc:any,el:any)=>({...acc,...el}))))
 
 
-
 // v2
 // function Proomise (n:any) {
 //      return Promise.resolve(n)
@@ -203,7 +206,6 @@
 //     })
 //     console.log(c)
 // })
-
 
 
 //v3 parse
@@ -227,3 +229,103 @@
 //             res()
 //         }, 5)
 //     })]).then(console.log)
+
+// -11-
+// const pr = new Promise((res,rej)=>{
+//     setTimeout(()=>{
+//         console.log(1)
+//         res(10)
+//     },100)
+//     setInterval(()=>{
+//         console.log(2)
+//         rej(15)
+//     },75)
+// })
+// .then(res=>console.lg(res))
+// .catch(res=>console.log(res))
+
+//-12-
+// const pr = new Promise((res,rej)=>{
+//     return 10
+//     setTimeout(()=>res(10))
+//     setTimeout(()=>rej(20),0)
+// })
+//     .then((res)=>{
+//         return 20
+//         console.log(res)
+//     })
+//     .catch(console.log)
+
+// const arr = [1,2,3,4,5]
+// Promise.all(arr.map(u=>u)).then(res=>console.log(...res))
+
+// const arr = [1,2,3,4,5]
+// let pr = []
+// for ( var x = 0 ; x < arr.length ; x ++ ){
+//     let a = new Promise((res,rej)=>{
+//         res(arr[x])
+//     })
+//     pr.push(a)
+// }
+// Promise.all(pr)
+
+// вложенность данных then
+// function helper
+// let pr = new Promise((res, rej) => {
+//     let man = {
+//         name: 'dimych'
+//     }
+//     res(man)
+// })
+//     .then(res => {
+//         res.age = 32
+//         let man2 = res
+//         console.log(man2)
+//         return new Promise((res, rej) => {
+//             res(man2)
+//         })
+//             .then(res => {
+//                 res.work = 'it'
+//                 console.log(res)
+//             })
+//     })
+
+// через return
+// let pr = new Promise((res, rej) => {
+//     let man = {
+//         name: 'dimych'
+//     }
+//     res(man)
+// })
+//     .then(res => {
+//         res.age = 32
+//         let man2 = res
+//         console.log(man2)
+//         return man2
+//     })
+//     .then(res => {
+//         res.work = 'it'
+//         console.log(res)
+//     })
+
+// вложенность данных async
+
+// async function f() {
+//     await new Promise((res, rej) => {
+//         const arr = {
+//             age: 32
+//         }
+//         console.log(arr)
+//         res(arr)
+//         return new Promise((res, rej) => {
+//             arr.man = 32
+//             console.log(arr)
+//             res(arr)
+//             return new Promise((res, rej) => {
+//                 arr.work = 'it'
+//                 console.log(arr)
+//                 res(arr)
+//             })
+//         })
+//     })
+// }

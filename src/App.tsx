@@ -5,6 +5,7 @@ import './lessonDegree34/lesson3/lesson_3.ts';
 import './lessonDegree34/lesson4/lesson_4.ts';
 import './question/test1'
 import './question/Promise'
+import './question/task'
 import {Test, Test1} from "./question/test1";
 
 function App() {
