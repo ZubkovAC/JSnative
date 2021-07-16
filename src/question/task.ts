@@ -216,7 +216,6 @@
 // const userUp2 = users2.map(t=>t.id===4? {...t,name:'good'}: t)
 
 
-
 // ++ каждый элемент уникальный
 
 // let arr = [1,1,2,3,4,4,5,5,5]
@@ -306,5 +305,353 @@
 //     return num
 // }
 // sumNumbers(4)
+
+// Promise - последовательно вывод консоль лога
+// const wait = (ms,i)=>{
+//     let pr = new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log(ms*i)
+//             res()
+//         },ms*i)
+//     })
+// }
+// (async function(){
+//     for (let i = 1 ; i < 11 ; i++ ){
+//         console.log(i)
+//         await wait(1000,i)
+//     }
+// })()
+//
+// const wait2 = (ms)=>{
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res()
+//         },ms)
+//     })
+// }
+// (async function(){
+//     for (let i = 1 ; i < 11 ; i++ ){
+//         console.log(i)
+//         await wait2(1000)
+//     }
+// })()
+
+
+// что выведется в консоль
+//     const rp = Promise.resolve(1)
+//         rp.then(r=>console.log(r+1))
+//         rp.then(r=>console.log(r+2))
+
+// const rp = Promise.resolve(1)
+// .then(r=>console.log(r+1))
+// .then(r=>console.log(r+2))
+
+
+// Analog useCallback - useMemo
+
+// const onClick =useCallback(()=>{
+//     alert('c')
+// },[c])
+// const onClick2 = useMemo(()=>{
+//     onClick
+// },[])
+// const onClick2 = useMemo(()=>()=>{
+//     alert(c)
+// },[c])
+
+// castom hook useGeneCallback - useMemo analog useCallback
+// const useGeneCallback = (func,c)=>{
+//     return useMemo(()=>func,c)
+// }
+
+// счетчик
+// const makeCounter = (n) => () => n++
+// const makeCounter = (n) =>{
+//     return function make (){
+//         return n++
+//     }
+// }
+// const c1 = makeCounter(0)
+// const c2 = makeCounter(100)
+// console.log(c1())
+// console.log(c1())
+// console.log(c1())
+// console.log(c2())
+// console.log(c2())
+// console.log(c1())
+//
+// // имя
+// const setName = (car) =>{
+//     return function speed (speed){
+//         let spd = speed
+//         return function up (n) {
+//             return `My ${car} flay in ${spd*n} km/h!`
+//         }
+//     }
+// }
+//
+// const set = setName('Bernuni')
+// const gogo = set(100)
+// console.log(gogo(2))
+// console.log(gogo(3))
+
+// const obj = {}
+// let p1 = 'Dimych'
+// let p2 = 'Sasha'
+//
+// obj[p1]= 33
+// obj[p2]= 30
+// obj[obj]= 100
+// console.log(obj)
+
+
+// function makeCounter(n){
+//     return function mnojetel(a){
+//         return function counter(){
+//             n *= a
+//             return n
+//         }
+//     }
+// }
+//
+// const mn = makeCounter (10)
+// const count = mn(3)
+// console.log(count())
+// console.log(count())
+// console.log(count())
+// console.log(count())
+
+
+// context
+// function hello () {
+//     alert (this.name)
+// }
+// let man = {name:"Dimych"}
+// hello.bind(man)()
+
+
+// console.log
+// let a = 10   // var a
+// function yo () {
+//     let a = 20  // a
+// }
+// yo()
+// console.log(a)
+
+
+// console.log
+// let a = { name:'Dimych'}
+// a[0] = 'hey'
+// a[1]= 'yo'
+// a[2]= 'blabla'
+// console.log(a)
+
+// let hello = new Promise(()=>{})
+// let result = hello.then(()=>6)
+// console.log(result)
+
+
+// let man = { lastName:'kuzyberdin'}
+// function hello(firstName){
+//     console.log(firstName + this.lastName)
+// }
+// let hello2 = hello.bind(man)
+// hello2('Dmitry') //1
+// hello.bind(man)('Dmitry') //2
+
+// let hello2 = hello.bind(man)('Dmitry')
+// hello2 // 3
+
+// let a = 10
+// function yo(a){
+//     a = 100
+//     return a
+// }
+// yo(30)
+// console.log(a)
+
+
+// let hello = new Promise(()=>{})
+// let result = hello.catch(()=>15)
+// console.log(result)
+
+// async function yo(){
+//     return 16
+// }
+// let result = yo()
+// console.log(result)
+
+// let shit = () => () => () => () => 10
+// let result = shit()()()()
+// console.log(result)
+
+// let man = {
+//     name:'Dimych',
+//     hello:()=>console.log(this.name)
+// }
+// man.hello()
+
+// let man = {
+//     name:'Dimych',
+//     hello:function (){console.log(this.name)}
+// }
+// man.hello()
+
+
+// const  a = 10
+// function yo(){
+//     a = 100
+// }
+// yo()
+// console.log(a)
+
+
+// (async () => {
+//     let hello = new Promise((res, rej) => {
+//         rej(10)
+//     })
+//     let result = await hello
+//     console.log(result)
+// })()
+
+// let man = {
+//     name:'Dimych',
+//     age:33
+// }
+// let man2 = {
+//     age:12
+// }
+// let dimych = {...man, ...man2}
+
+// function makeCounter(){
+//     let value = 0
+//     return function(){
+//         return value++
+//     }
+// }
+// let counter = makeCounter()
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+
+
+// setTimeout(()=>console.log(1),1)
+// setTimeout(()=>console.log(2),0)
+
+// let a = {name:'Dimych'}
+// let names = ['tanya', 'ignat', 'dima']
+// names.forEach(n => a[n]= 'hey')
+// console.log(a)
+
+// task   a= {'tanya':'hey', 'ignat':'hey', 'dima':'hey'}
+// let a = {}
+// let names = ['tanya', 'ignat', 'dima']
+// names.reduce((total, el) => {
+//     total[el] = 'hey'
+//     return total
+// }, {})
+// names.forEach(el => {
+//     a[el] = 'hey'
+// })
+
+// let users = [{name:'dima' , age:18},{name:'ignat' , age:21}]
+// let users2 = users.map(u=> u.age<=18 && {...u,passed:true}).filter(t=>t!==false)
+// let users2 = users.filter(t => t.age === 18).map(u => {...u, passed:true})
+// console.log(users2)
+// let users2 = [{name:'dima' , age:18,passed:true}]
+
+// console.log('a'>'z')
+// console.log('a'>'1')
+// console.log('abcdz'>'abcd')
+// console.log('abcdz'>'abcd1')
+
+// let names = ['ignat', 'ignat-z' , 'dimych' ,'007', 'viktor']
+// let result = names.sort()
+// names === result
+
+// let state = {
+//     address: {
+//         streets: [{name: 'shabany'}, {name: 'surganova'}]
+//     },
+//     age: 10
+// }
+// let state2 = {
+//     ...state,
+//     address: {
+//         ...state.address,
+//         streets: state.address.streets.map(s => s.name === 'shabany' ? {...s, name: 'shabanovich'} : s)
+//     }
+// }
+// console.log(state)
+// console.log(state2)
+
+// let man = {
+//     get name() {
+//         return 'dymich'
+//     }
+// }
+// man.name
+
+// let a = {}
+// let names = ['tanya', 'ignat', 'dima']
+// let result = names.some(t => t === 'tanya')
+// let result2 = names.every(t => t === 'tanya')
+
+// let result = 'abcdefg dimych yo'.indexOf('dimych')
+// ' lba yo '.trim() === 'lba yo'
+
+// new Promise((res,rej)=>{
+//     setTimeout(()=>rej(1),0)
+//     res(2)
+// })
+//     .then(value => console.log(value))
+//     .catch(value => console.log(value))
+
+// async function yo(){
+//
+// }
+// let result = yo()
+// result.then(r=>console.log(r))
+
+// [512,1231,52343]
+// let arr = [
+//     [1, 22, 512],
+//     [35, 234, 1231],
+//     [52343, 1123, 3232]
+// ]
+//
+// function arrSort(arr) {
+//     return arr.map(t => filterArr(t))
+// }
+//
+// function filterArr(arr) {
+//     let arrF = arr.sort((a, b) => b - a)
+//     return arrF[0]
+// }
+
+
+//flat - reduce + concat
+// let arr =  [1,2,3,[4,5,6,[7,8,9,]]]
+// function parseArr ( arr){
+//    return arr.reduce((acc,el)=> Array.isArray(el)
+//         ? acc.concat(parseArr(el))
+//         : acc.concat(el),[]
+//     )
+// }
+// console.log(parseArr(arr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

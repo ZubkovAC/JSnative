@@ -8,16 +8,23 @@ import './question/Promise'
 import './question/task'
 import {Test, Test1} from "./question/test1";
 
+
 function App() {
-  return (
-    <div>
-      {/*<Provider store={store}>*/}
-      {/*<Lesson1 />*/}
-      {/*    </Provider>*/}
-      <Test/>
-        {/*<Test1/>*/}
-    </div>
-  );
+    let sspeed = {
+        name:'vw',
+        speed:50
+    }
+
+     let kardan = [1, 2, 3, 4, 5]
+    return (
+        <div>
+            {/*<Provider store={store}>*/}
+            {/*<Lesson1 />*/}
+            {/*    </Provider>*/}
+            <Test kardan={kardan} sspeed={sspeed}/>
+            {/*<Test1/>*/}
+        </div>
+    );
 }
 
 export default App;
